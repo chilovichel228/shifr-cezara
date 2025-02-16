@@ -8,7 +8,6 @@ else:
 message = input("ведите слово ").lower()
 chiper = []
 step = int (input("введите шаг сдвига "))
-print (alphabet)
 for simbol in message:
     index = alphabet.find(simbol)+step
     chiper.append(index)
