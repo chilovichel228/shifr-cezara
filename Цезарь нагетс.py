@@ -1,14 +1,20 @@
 alphabet_ru = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+Alphabet_EN = "abcdefghijklmnopqrstuvwxyz"
+lang = input("Выберите язык en/ru ")
+if lang == "en":
+    alphabet = Alphabet_EN
+else:
+    alphabet = alphabet_ru
 message = input("ведите слово ").lower()
 chiper = []
-print(alphabet_ru[0],alphabet_ru[12],alphabet_ru[21])
 step = int (input("введите шаг сдвига "))
+print (alphabet)
 for simbol in message:
-    index = alphabet_ru.find(simbol)+step
+    index = alphabet.find(simbol)+step
     chiper.append(index)
 print(chiper)
 result = ""
 for index in chiper:
-    letter = alphabet_ru[index-step]
+    letter = alphabet[index-step]
     result += letter
 print(result)
